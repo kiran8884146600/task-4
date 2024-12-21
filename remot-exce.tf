@@ -13,11 +13,4 @@ resource "aws_instance" "instance_1" {
       "sudo systemctl enable nginx"
     ]
   }
-  #connection {
-      type        = "ssh"
-      host        = self.public_ip
-      user        = "ubuntu"
-      private_key = file("/home/user/Downloads/keys/aws/aws_key")
-      timeout     = "4m"
-   }
-}
+  }
