@@ -13,7 +13,7 @@ resource "aws_instance" "instance_1" {
       "sudo systemctl enable nginx"
     ]
   }
-  connection {
+  #connection {
       type        = "ssh"
       host        = self.public_ip
       user        = "ubuntu"
