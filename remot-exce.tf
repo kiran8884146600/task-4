@@ -3,7 +3,7 @@ resource "aws_instance" "instance_1" {
     instance_type = "t2.micro" 
     key_name= "aws_key"
     subnet_id       = ["aws_subnet.public_a.id","aws_subnet.public_b.id"]
-    security_groups = ["aws_security_group" "allow_http","aws_security_group" "allow_https"]
+    security_groups = ["aws_security_group" "allow_http"]
 
   provisioner "remote-exec" {
     inline = [
